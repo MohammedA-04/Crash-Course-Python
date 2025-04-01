@@ -1,22 +1,24 @@
 # 4.1 Pizza
-from userpath.cli import append
+# from userpath.cli import append
 
 pizza = ['Pizza One', 'Pizza Two', 'Pizza Three']
 print(pizza)
 
+# Looping List
 for p in pizza:
     print(p)
 
+# List Sum
 secondls = [1,2,3,4,5]
 sum = sum(secondls)
 print(sum)
 
-# Extra Q: copy slice / separate list
+# Extra Q: copy slice is a separate list
 new_list = pizza[:]
 print("Old List: ", pizza)
 print("New List not linked: ", new_list)
 
-# 4.2: Sum a million
+# 4.2: Loop from 1 to 1 mil, return min/max()
 list = []
 for i in range(1, 1_000_001):
     list.append(i)
@@ -37,7 +39,7 @@ for i in range(3, 33, 3):
 print(f"Three {three}")
 
 # 4.5 Cubes
-count =  1
+count = 1
 cubes = []
 while count < 11:
     cubes.append(f"{count} ** 3")
@@ -54,8 +56,8 @@ nums = [ i for i in range(1,11)]
 print(f"Nums to select from: {nums}")
 print(f"Nums to {nums[0:3]}")
 
-mid = len(nums) // 2
-print(f"Nums to {nums[mid-1:]}")
+mid = (len(nums) // 2) - 1 # 5.0 - 1.0 to avoid off by one err
+print(f"Nums to {nums[mid:]}")
 
 # 4.11: My and Your Pizza
 copy = pizza[:]
@@ -64,9 +66,21 @@ copy.append('Extra Hot Special ')
 print(pizza)
 print(copy)
 
-# 4.13
-tuple = ('Cucumber', 'Mango', 'Kiwi', 'Strawberry', 'Raspberry')
-print(tuple)
-# make reassinment
-tuple = ('Cucumber', 'Burger', 'Kiwi', 'Pizza', 'Raspberry')
-print(tuple)
+# 4.13 Buffet
+# pt1: Loop to print each food
+# pt2: Menu Change: Replace two after
+
+print("\nTuples\n ")
+foods = ('Cucumber', 'Mango', 'Kiwi')
+for tup in foods:
+    print(tup)
+
+# Pt2
+foods = ('Cucumber', 'Burger', 'Kiwi')
+print()
+for tup in foods:
+    print(tup)
+
+# Fun
+tupply = (29,)
+print(f"Example tupply = (20,) is valid w one element, not useful tho: {tupply}")
